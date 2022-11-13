@@ -4,11 +4,8 @@
  */
 var findDisappearedNumbers = function(nums) {
     let map = {}
-    for(let i = 1; i < nums.length + 1; i++){
-        map[i] = false;
-    }
     for(let j = 0; j < nums.length; j++){
-        if(map[nums[j]] == false){
+        if(!map[nums[j]]){
             map[nums[j]] = true;
         }
     }
